@@ -90,8 +90,8 @@ public class BattleSystem : MonoBehaviour
             - Yacht: Hit by a yacht (1 turn stun + extra money)
         */
 
-        attack = "short_straight";
-        score = 20;
+        attack = "5";
+        score = 35;
 
         if(string.Equals(attack,"1")) {
             damage = score + 1;
@@ -154,7 +154,14 @@ public class BattleSystem : MonoBehaviour
     }
 
     void EnemyTurn() {
-        bool isDead = yondUnit.TakeDamage(enemyUnit.damage);
+
+        damage = 0;
+
+        for (int i = 0; i < 6; i++) {
+            damage += Random.Range(1,7);
+        }
+
+        bool isDead = yondUnit.TakeDamage(damage);
 
         yondHUD.SetHP(yondUnit.currentHP);
 
