@@ -9,6 +9,7 @@ public class Unit : MonoBehaviour
     public int damage;
     public int maxHP;
     public int currentHP;
+    public int money;
 
     public bool TakeDamage(int dmg) {
         currentHP -= dmg;
