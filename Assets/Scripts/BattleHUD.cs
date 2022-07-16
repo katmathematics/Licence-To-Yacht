@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class BattleHUD : MonoBehaviour
 {
-    public Text nameText;
+    //public Text nameText;
     public Slider hpSlider;
 
     public void SetHUD(Unit unit) {
-        nameText.text = unit.unitName;
+        //nameText.text = unit.unitName;
         hpSlider.maxValue = unit.maxHP;
         hpSlider.value = unit.currentHP;
     }

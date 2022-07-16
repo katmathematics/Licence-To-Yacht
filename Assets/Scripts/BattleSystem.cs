@@ -25,10 +25,10 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
-        StartCoroutine(SetupBattle());
+        SetupBattle();
     }
 
-    IEnumerator SetupBattle() {
+    void SetupBattle() {
         GameObject yondGO = Instantiate(yondPrefab, yondStation);
         GameObject enemyGO = Instantiate(enemyPrefab, enemyStation);
 
@@ -37,24 +37,12 @@ public class BattleSystem : MonoBehaviour
 
         yondHUD.SetHUD(yondUnit);
         enemyHUD.SetHUD(enemyUnit);
-
-        yield return new WaitForSeconds(2f);
 
         state = BattleState.PLAYERTURN;
         PlayerTurn();
     }
 
     void PlayerTurn() {
-        GameObject yondGO = Instantiate(yondPrefab, yondStation);
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyStation);
-
-        yondUnit = yondGO.GetComponent<Unit>();
-        enemyUnit = enemyGO.GetComponent<Unit>();
-
-        yondHUD.SetHUD(yondUnit);
-        enemyHUD.SetHUD(enemyUnit);
-
-        state = BattleState.PLAYERTURN;
-        PlayerTurn();
+        
     }
 }
