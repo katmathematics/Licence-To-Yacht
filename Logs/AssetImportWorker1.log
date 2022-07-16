@@ -1,0 +1,912 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.6f1 (7da38d85baf6) revision 8233869'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 16118 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/katja/UnityGames/Jams/GMTK_2022
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+56491
+Successfully changed project path to: C:/Users/katja/UnityGames/Jams/GMTK_2022
+C:/Users/katja/UnityGames/Jams/GMTK_2022
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 633.67 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.6f1 (7da38d85baf6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/katja/UnityGames/Jams/GMTK_2022/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   Intel
+    VRAM:     8059 MB
+    Driver:   27.20.100.9664
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.022727 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 661.62 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.340 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2342ms)
+		BeginReloadAssembly (223ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1786ms)
+			LoadAssemblies (215ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (340ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (1207ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (28ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (662ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (386ms)
+				ProcessInitializeOnLoadMethodAttributes (126ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.023939 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\katja\UnityGames\Jams\GMTK_2022\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\katja\UnityGames\Jams\GMTK_2022\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 553.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.395 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3398ms)
+		BeginReloadAssembly (303ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (2774ms)
+			LoadAssemblies (216ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (674ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (121ms)
+			SetupLoadedEditorAssemblies (1679ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (554ms)
+				BeforeProcessingInitializeOnLoad (251ms)
+				ProcessInitializeOnLoadAttributes (693ms)
+				ProcessInitializeOnLoadMethodAttributes (147ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (29ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 2.54 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4111 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (86.1 KB). Loaded Objects now: 4568.
+Memory consumption went from 160.6 MB to 160.5 MB.
+Total: 7.236900 ms (FindLiveObjects: 0.366400 ms CreateObjectMapping: 0.342400 ms MarkObjects: 6.155200 ms  DeleteObjects: 0.370300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 599490.760720 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Character Pack/PNG/Hair/Black/blackMan1.png
+  artifactKey: Guid(993adaee77650db43bfde0d712ce09ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Character Pack/PNG/Hair/Black/blackMan1.png using Guid(993adaee77650db43bfde0d712ce09ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ba662ed4cc3df0c3f08f7adf36902e') in 0.291088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game Icons Expansion/PNG/White/1x/fightFist_circle.png
+  artifactKey: Guid(20be348c9acdba242b9b333dae18bb43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game Icons Expansion/PNG/White/1x/fightFist_circle.png using Guid(20be348c9acdba242b9b333dae18bb43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dda38012c3a9b1a6a08e6306017b932') in 0.048131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_boxTick.png
+  artifactKey: Guid(61fd4e62eff8cf743a424e68e91bdd44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_boxTick.png using Guid(61fd4e62eff8cf743a424e68e91bdd44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f43b55f8075f9da213d3d0375a943be') in 0.034217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game Icons Expansion/PNG/Black/1x/fightFist_circle.png
+  artifactKey: Guid(8899afac9d49a02499862aa4e40b1bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game Icons Expansion/PNG/Black/1x/fightFist_circle.png using Guid(8899afac9d49a02499862aa4e40b1bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d9ed9ed6130861b7b2121979ff31101') in 0.033298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Items/axe_silver.png
+  artifactKey: Guid(80f7bc7735746bc4581d1405c906a9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Items/axe_silver.png using Guid(80f7bc7735746bc4581d1405c906a9bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9329dfc7f5fb6a19c609bac13752597') in 0.040225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/White/2x/cross.png
+  artifactKey: Guid(8090780ccd7697d4691c0462c82295cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/White/2x/cross.png using Guid(8090780ccd7697d4691c0462c82295cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886d7638185e5408070295d61645a31a') in 0.055730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Items/axe_iron.png
+  artifactKey: Guid(bf4bff478d8fd4141a245cd96f56321b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Items/axe_iron.png using Guid(bf4bff478d8fd4141a245cd96f56321b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44f0cd5a6509c37aa2326c33f6c0e3c') in 0.052029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/Black/1x/cross.png
+  artifactKey: Guid(4eaa2c4f30df43e4680aeab22d884451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/Black/1x/cross.png using Guid(4eaa2c4f30df43e4680aeab22d884451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaea1d7f6038a35cf50e64202020b35c') in 0.046796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Character Pack/PNG/Hair/Black/blackMan4.png
+  artifactKey: Guid(9ca825f32ae07cd498a759727d09e1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Character Pack/PNG/Hair/Black/blackMan4.png using Guid(9ca825f32ae07cd498a759727d09e1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c865bae8ebfbbd111cad463d016e52f') in 0.054408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_boxCheckmark.png
+  artifactKey: Guid(d3d49acd4187d75478c79dd3f4ba8053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_boxCheckmark.png using Guid(d3d49acd4187d75478c79dd3f4ba8053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0bafda55f91f7c77b6234d8718fdf6a') in 0.047443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Items/axe_diamond.png
+  artifactKey: Guid(8cc293bd9a47a1e4b89971690c4f6c76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Items/axe_diamond.png using Guid(8cc293bd9a47a1e4b89971690c4f6c76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26cfcf4a430f68cc0954fbd872bfce92') in 0.051866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Animal Pack/Spritesheet/square_nodetails.png
+  artifactKey: Guid(970e33ee6b980564db3f391d51561e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Animal Pack/Spritesheet/square_nodetails.png using Guid(970e33ee6b980564db3f391d51561e66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f101b9437c426aa0e0ee9586d69049d7') in 0.135000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_cross.png
+  artifactKey: Guid(ed49ce334fddf354fb766ed982922183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_cross.png using Guid(ed49ce334fddf354fb766ed982922183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2763c8edbed03f223fe52480b4e148e') in 0.042714 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Character Pack/PNG/Hair/Black/blackMan2.png
+  artifactKey: Guid(a12c91a4e7817af469be3b7df298df46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Character Pack/PNG/Hair/Black/blackMan2.png using Guid(a12c91a4e7817af469be3b7df298df46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89a8ef4912228c7c192579912c72bcd3') in 0.057422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.033271 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/green_circle.png
+  artifactKey: Guid(468b503c37359ad4da3704d543afb4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/green_circle.png using Guid(468b503c37359ad4da3704d543afb4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cacdead24f6a5f61648fdc9be9dd1ee1') in 0.038700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.562114 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/iconCircle_beige.png
+  artifactKey: Guid(03eb135539cd369499e50a561259d935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/iconCircle_beige.png using Guid(03eb135539cd369499e50a561259d935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '046c3ac9f84676458bdf3912ecc3ebbf') in 0.034236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/iconCircle_brown.png
+  artifactKey: Guid(7a26e5f8d80723d41a1980d3dfdccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/iconCircle_brown.png using Guid(7a26e5f8d80723d41a1980d3dfdccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86de676d1e3d7a9ba1c5589721cca76') in 0.033929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.016838 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/White/2x/kickCircle.png
+  artifactKey: Guid(cfd310bf117173c469f2c3fcebae8fe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/White/2x/kickCircle.png using Guid(cfd310bf117173c469f2c3fcebae8fe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aee83a13fd5e9f97588c02b183edf94') in 0.041518 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.239765 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/Black/1x/kickCircle.png
+  artifactKey: Guid(5e7e0aa1fe2df0643b1dbdb8110bc4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/Black/1x/kickCircle.png using Guid(5e7e0aa1fe2df0643b1dbdb8110bc4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f24ac3a90be6e7047aec682cf11202b0') in 0.032272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.183714 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/Black/1x/punchCircle.png
+  artifactKey: Guid(7a35a96552c9f674cb44e6a4e19f94e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/Black/1x/punchCircle.png using Guid(7a35a96552c9f674cb44e6a4e19f94e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da85306630f18c02b09b92c40a40b679') in 0.035612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.040519 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/White/1x/punchCircle.png
+  artifactKey: Guid(6a6c64cd6d2460545b6afdf81e776a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game icons Fighter Expansion/PNG/White/1x/punchCircle.png using Guid(6a6c64cd6d2460545b6afdf81e776a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a95d0410836eb8c25d7cc96c30d0981') in 0.035489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.110927 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Buildings/PNG/awningGreenRed.png
+  artifactKey: Guid(93729d6797801c94f8e48657dbcf08e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Buildings/PNG/awningGreenRed.png using Guid(93729d6797801c94f8e48657dbcf08e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8517f97bcf329617ad84740052155d4a') in 0.031690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/barGreen_horizontalRight.png
+  artifactKey: Guid(8865d1bf39cd60348a379bd25eb4da2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/barGreen_horizontalRight.png using Guid(8865d1bf39cd60348a379bd25eb4da2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c46afc89ffe38b09c629ae4f3c28b640') in 0.043177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/barGreen_verticalTop.png
+  artifactKey: Guid(019a0287e24ae8a41a591c75ae3cf337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/barGreen_verticalTop.png using Guid(019a0287e24ae8a41a591c75ae3cf337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce963b489b02314504f6257c676c01a') in 0.031865 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Tanks/barrelGreen.png
+  artifactKey: Guid(494954cc21f576e42a00256fbf581bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Tanks/barrelGreen.png using Guid(494954cc21f576e42a00256fbf581bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d4145971be443393843772b24c376c1') in 0.034686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Tanks/barrelGreen_outline.png
+  artifactKey: Guid(c125a2dc46c3c234482edd7306e9a208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Tanks/barrelGreen_outline.png using Guid(c125a2dc46c3c234482edd7306e9a208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97daa807ae178c31151c5daeb21e9df1') in 0.038201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barVertical_green_bottom.png
+  artifactKey: Guid(dbf527c9dffe1d84db49f4f832a24e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barVertical_green_bottom.png using Guid(dbf527c9dffe1d84db49f4f832a24e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb2aafda7048e299b74d8d150bf0ae9c') in 0.034538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Obstacles/barrelGreen_side.png
+  artifactKey: Guid(724dcd9f45bb74a468cf5e3ec288b4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Obstacles/barrelGreen_side.png using Guid(724dcd9f45bb74a468cf5e3ec288b4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a1bdf0b6beb4cacc0dfc84f9e43fa4') in 0.034828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barHorizontal_green_mid.png
+  artifactKey: Guid(b1466988fd51a8845ba8971111677421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barHorizontal_green_mid.png using Guid(b1466988fd51a8845ba8971111677421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f6f992dcc5ebe98e2442c67abeb86ad') in 0.037075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen02.png
+  artifactKey: Guid(d0c729fec60346a43a8c6cdf39c79b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen02.png using Guid(d0c729fec60346a43a8c6cdf39c79b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57929f4287fe3a872a2b13a2ab24abf') in 0.040897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen04.png
+  artifactKey: Guid(48a71858d2e777142b4fc9408d638345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen04.png using Guid(48a71858d2e777142b4fc9408d638345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09110a8d9738b4427cf17236594c9868') in 0.037283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen10.png
+  artifactKey: Guid(c76c53e56aa3b2b429b1c249bd55cbfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen10.png using Guid(c76c53e56aa3b2b429b1c249bd55cbfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d5cb76cb90ebc81461a461268297ef') in 0.039348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen08.png
+  artifactKey: Guid(66a4bf3bb77caee44a10d97988379453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen08.png using Guid(66a4bf3bb77caee44a10d97988379453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8d8196104de86627322064e6e51f2b') in 0.036661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen03.png
+  artifactKey: Guid(dbc6fa94863bd8144a375c81def2402a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen03.png using Guid(dbc6fa94863bd8144a375c81def2402a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edfbcac71eecf7c52791857b770bd49c') in 0.039395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Holiday/PNG/ball_green.png
+  artifactKey: Guid(02f3564c2c1b08e40a3f55edbe6da5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Holiday/PNG/ball_green.png using Guid(02f3564c2c1b08e40a3f55edbe6da5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c53dfd0ee67968d06477c029eaa7a74') in 0.039968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/barGreen_horizontalMid.png
+  artifactKey: Guid(711c8c6a7b8b52d4985dc5afad16782c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Adventure Pack/PNG/barGreen_horizontalMid.png using Guid(711c8c6a7b8b52d4985dc5afad16782c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ab36be55ed33f99989ceffddd38150e') in 0.048597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.147071 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen12.png
+  artifactKey: Guid(b4825e60f7fafeb468e18351c846b02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen12.png using Guid(b4825e60f7fafeb468e18351c846b02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c53ba59a2b0accece02e7d7e7692a96') in 0.032456 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen13.png
+  artifactKey: Guid(976d333cde8a762469faaf78afa2ba8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen13.png using Guid(976d333cde8a762469faaf78afa2ba8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeca1ba53dd1bd046f21c73739f294cf') in 0.034156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen15.png
+  artifactKey: Guid(85d0972b1524fc349bce51886ea55fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Toy Brick Pack/PNG/Green/brickGreen15.png using Guid(85d0972b1524fc349bce51886ea55fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a438ee0394ac8563cc3922d8af6dc19e') in 0.029465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Bullets/bulletGreen.png
+  artifactKey: Guid(6b970ef7bf386af459fb53b9f09c9a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Bullets/bulletGreen.png using Guid(6b970ef7bf386af459fb53b9f09c9a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0956790ddc4fa692da256eda5b56a496') in 0.036016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.157463 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Bullets/bulletGreenSilver_outline.png
+  artifactKey: Guid(a0dd9cbf7372fc748b7680247b33311d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Topdown Tanks/PNG/Bullets/bulletGreenSilver_outline.png using Guid(a0dd9cbf7372fc748b7680247b33311d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39d47e77a86b44c5a54d3cf4860c6478') in 0.037114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/UI/buttonGreen.png
+  artifactKey: Guid(2797cee8d8a69cb4a964a7b795e96734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/UI/buttonGreen.png using Guid(2797cee8d8a69cb4a964a7b795e96734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac51403f773ffacae938277acdfe84eb') in 0.033439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Ice/PNG/caneGreen.png
+  artifactKey: Guid(668c0ed5a2e571e4f911029f5cb54826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Ice/PNG/caneGreen.png using Guid(668c0ed5a2e571e4f911029f5cb54826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc3dfcc70e1eadd1688df632a2d3bcb5') in 0.031475 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.450119 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Ice/PNG/caneGreenTopAlt.png
+  artifactKey: Guid(a40d2f45ba969214888a3d4d97a9dd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Platformer Assets Ice/PNG/caneGreenTopAlt.png using Guid(a40d2f45ba969214888a3d4d97a9dd48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa94e6b443fb54ebb594b17867c72d52') in 0.046720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_2.png
+  artifactKey: Guid(1ca677e7296ab2545afb3b555165a162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_2.png using Guid(1ca677e7296ab2545afb3b555165a162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c4a1891c84c6d4accfa60737f2a2b0f') in 0.056233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_1.png
+  artifactKey: Guid(86a0994fba4a1d5439328d3a73f59275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_1.png using Guid(86a0994fba4a1d5439328d3a73f59275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6bddb8b8ea345e09e4daa848fce7a2') in 0.040010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_small_1.png
+  artifactKey: Guid(6ce873b1dad0d3b4f81bc06188a94234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_small_1.png using Guid(6ce873b1dad0d3b4f81bc06188a94234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546a99f09241af2033f11e7043015a1f') in 0.030441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.166006 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_small_3.png
+  artifactKey: Guid(738650a5ef03192428ae2de599348d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_small_3.png using Guid(738650a5ef03192428ae2de599348d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d01a7f18454bd8f2da545995658fc70') in 0.030552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_small_4.png
+  artifactKey: Guid(e4c11666c7a8d044bbaaca8f997d9753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Cars/car_green_small_4.png using Guid(e4c11666c7a8d044bbaaca8f997d9753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df28ea3f1f40d87fde5b0170aa28a8c0') in 0.029251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Boardgame Pack/PNG/Cards/cardBack_green1.png
+  artifactKey: Guid(11a1b9bc1a4ad5842a9d21480d5aaed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Boardgame Pack/PNG/Cards/cardBack_green1.png using Guid(11a1b9bc1a4ad5842a9d21480d5aaed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83567dbb47605b3b7d6f3f2b52defa13') in 0.037631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Boardgame Pack/PNG/Cards/cardBack_green3.png
+  artifactKey: Guid(1465b428ab5d5fb48a4b36ced97963bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Boardgame Pack/PNG/Cards/cardBack_green3.png using Guid(1465b428ab5d5fb48a4b36ced97963bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '976b0260dcf63003cfe09b60580a4e70') in 0.036872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.131640 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Hexagon Pack/PNG/Objects/carGreen.png
+  artifactKey: Guid(52ed6204aadc54045a4407454c869e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Hexagon Pack/PNG/Objects/carGreen.png using Guid(52ed6204aadc54045a4407454c869e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2967def0dd067b18c82314bd65b984ad') in 0.037067 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_000.png
+  artifactKey: Guid(a30a341ba01468747a0bca091547f45b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_000.png using Guid(a30a341ba01468747a0bca091547f45b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a18b1e17fa1270a4ab448c5362ad7cc6') in 0.034936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_005.png
+  artifactKey: Guid(bded00f61f965264f92533a6923b54de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_005.png using Guid(bded00f61f965264f92533a6923b54de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '925bad4a021dbbd26f937b0635dcc28c') in 0.044040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_003.png
+  artifactKey: Guid(955e92d7aabc149489413cd56a6414c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_003.png using Guid(955e92d7aabc149489413cd56a6414c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a27b99068d840fc68fd46302e611c045') in 0.038642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.328000 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_007.png
+  artifactKey: Guid(1d040467ea3be3e46904350d5908b49c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_007.png using Guid(1d040467ea3be3e46904350d5908b49c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c68f2bd331d3e3e67620b76039ca953') in 0.033264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_008.png
+  artifactKey: Guid(a145757272c5664469475495fac38333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_008.png using Guid(a145757272c5664469475495fac38333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '997e2cf69a32effd5ba714c8aba12823') in 0.036167 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_009.png
+  artifactKey: Guid(ead7d3b1097519043806e27c7ea2d3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Pick-up 1/carGreen1_009.png using Guid(ead7d3b1097519043806e27c7ea2d3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '814db065998c35e6d03eb3d33dab5d6b') in 0.043621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.073635 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 1/carGreen2_013.png
+  artifactKey: Guid(9766db96473844b48b88d61030e64a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 1/carGreen2_013.png using Guid(9766db96473844b48b88d61030e64a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479184612a9ea48faa4919e9563322d2') in 0.031632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_000.png
+  artifactKey: Guid(29d45d2ff4010094fb9b3bdb04619aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_000.png using Guid(29d45d2ff4010094fb9b3bdb04619aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6e78fe02071eee5956ecebff83859a') in 0.038813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 1/carGreen2_015.png
+  artifactKey: Guid(ce99c36d47ecf674188421aed48eb793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 1/carGreen2_015.png using Guid(ce99c36d47ecf674188421aed48eb793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc23e6ece3e79ac4f90d68fee5900c8') in 0.043014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_005.png
+  artifactKey: Guid(3f6fd99fea261a247a9aa75d84b963c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_005.png using Guid(3f6fd99fea261a247a9aa75d84b963c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6cdc17f1bc0af94107df2d2745e0b2') in 0.039810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_001.png
+  artifactKey: Guid(0c7a9929251442749a1262bd62b5b0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_001.png using Guid(0c7a9929251442749a1262bd62b5b0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f007e5e721ad68352eb240662c57ce44') in 0.034898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.075966 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_007.png
+  artifactKey: Guid(06161ec8faa9af045b7e67823b5e4ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_007.png using Guid(06161ec8faa9af045b7e67823b5e4ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a28c5e0e57839def45d129c09a3a8b42') in 0.045596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_013.png
+  artifactKey: Guid(3ba65d3efed491645bb18a2879f58f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_013.png using Guid(3ba65d3efed491645bb18a2879f58f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c40523400f1c721796bc9dd17568fdc0') in 0.051758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000478 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_011.png
+  artifactKey: Guid(da8694b2c75e1044a887a7a0b251a027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_011.png using Guid(da8694b2c75e1044a887a7a0b251a027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d5efac0af1e7fdbf888246a0c3668b') in 0.067831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_008.png
+  artifactKey: Guid(64b31514f80f91c4a9166a1137ea0b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_008.png using Guid(64b31514f80f91c4a9166a1137ea0b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd4f2946cb789763580fd0acf2a9f63') in 0.055748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.057791 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_015.png
+  artifactKey: Guid(2cc4de5c4f2c6ad4789ee8f60ee71c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 2/carGreen3_015.png using Guid(2cc4de5c4f2c6ad4789ee8f60ee71c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32b8b627def9d09d0a5b29daee17257a') in 0.071308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_005.png
+  artifactKey: Guid(5aaebabdf0a196243a5e12e24e09f1b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_005.png using Guid(5aaebabdf0a196243a5e12e24e09f1b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '103e53f4b3c94e0bcd4c590589519c12') in 0.054544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_003.png
+  artifactKey: Guid(3cd152d230d707541b71ae9c3e5321f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_003.png using Guid(3cd152d230d707541b71ae9c3e5321f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e0d01026308e7390836c22fe1e5edfe') in 0.053824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_004.png
+  artifactKey: Guid(4f099c3055af3a44bbbf96bf3f7bf9ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_004.png using Guid(4f099c3055af3a44bbbf96bf3f7bf9ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec3a01e22e6e9744261ca5e82c77e9ec') in 0.051657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.043049 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_007.png
+  artifactKey: Guid(fc80dbdabc80ea642a97471d980ba71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_007.png using Guid(fc80dbdabc80ea642a97471d980ba71c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '264ec227794f9fb4cdd29a5dc9bec5d7') in 0.057288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_010.png
+  artifactKey: Guid(2625cad5871348d4f9e32ccdaf206e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_010.png using Guid(2625cad5871348d4f9e32ccdaf206e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '056b31d8cbebe00ce234710d0b882268') in 0.054983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_012.png
+  artifactKey: Guid(7c8a38ae7741cd345ac89563a0005cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_012.png using Guid(7c8a38ae7741cd345ac89563a0005cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8b23f5f32d272e5ce9cb1d33b1ef90d') in 0.057262 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_015.png
+  artifactKey: Guid(d41fc789126dc9c4ba45c52895cf911c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_015.png using Guid(d41fc789126dc9c4ba45c52895cf911c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62531cb018d9b586aa878d731ee4151') in 0.050431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_011.png
+  artifactKey: Guid(20a97f0c95cbb90419ec4c0f70758e49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_011.png using Guid(20a97f0c95cbb90419ec4c0f70758e49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95c4f32c0a3dc7b0bfdaa365ebce4154') in 0.059103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 4/carGreen5_003.png
+  artifactKey: Guid(f75d1b2c9d868354ab5bb32accad935e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 4/carGreen5_003.png using Guid(f75d1b2c9d868354ab5bb32accad935e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbc3f70567e3041c7fd9b26c2d58d7e2') in 0.058170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_008.png
+  artifactKey: Guid(30db03eca82e2394e8cd9cd676ff7de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 3/carGreen4_008.png using Guid(30db03eca82e2394e8cd9cd676ff7de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6781bb2a71ac2809fb7595902e69baed') in 0.059633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 4/carGreen5_004.png
+  artifactKey: Guid(6f3866f01e331e24ca0246ddea027e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Sedan 4/carGreen5_004.png using Guid(6f3866f01e331e24ca0246ddea027e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e17baa88dd307f9cbf8993b005229dd6') in 0.058699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.412483 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_007.png
+  artifactKey: Guid(da1c96762b7db2c4cac0fd379eb5dc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_007.png using Guid(da1c96762b7db2c4cac0fd379eb5dc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '574498c1a6d01db4c79d76150bb07836') in 0.049479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.208625 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_009.png
+  artifactKey: Guid(6d77e4092d203c84b860e8f34fd80fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_009.png using Guid(6d77e4092d203c84b860e8f34fd80fd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14cc71bc737b644d58c14e49e2a38b1c') in 0.030978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_010.png
+  artifactKey: Guid(a0c4ca0f41811a442b9da3ef47f91c8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_010.png using Guid(a0c4ca0f41811a442b9da3ef47f91c8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cf905b94fec899c244eda1f2e2a5e71') in 0.052347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_013.png
+  artifactKey: Guid(74b226547cdec4f4eae3721544c8018a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_013.png using Guid(74b226547cdec4f4eae3721544c8018a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a6e1d30954960a283b4e21520dda88c') in 0.043892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_014.png
+  artifactKey: Guid(a3ad6be0471cf5d45947d9daadcb88a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Isometric Tiles Vehicles/PNG/Civilian/Green/Truck 1/carGreen6_014.png using Guid(a3ad6be0471cf5d45947d9daadcb88a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '806bae2f8deae3a19bc9e083ea6d3d4e') in 0.043304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.826694 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Boardgame Pack/PNG/Chips/chipGreen_side.png
+  artifactKey: Guid(98af7910e256b6d40909bc27d4af2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Boardgame Pack/PNG/Chips/chipGreen_side.png using Guid(98af7910e256b6d40909bc27d4af2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1aac65f3429796b7b98135d38891866') in 0.033002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.317585 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Parts/cockpitGreen_1.png
+  artifactKey: Guid(bdfd8ee02d07fa64598eaa0e18be29b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Parts/cockpitGreen_1.png using Guid(bdfd8ee02d07fa64598eaa0e18be29b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '204824b1598b89e3add884a4e7f6b1b3') in 0.036425 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Parts/cockpitGreen_2.png
+  artifactKey: Guid(5ba3e1a5fc5b2434f81e3251006fccd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Parts/cockpitGreen_2.png using Guid(5ba3e1a5fc5b2434f81e3251006fccd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dcd610f65cc76c3f9d7c4defd654b81') in 0.036621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Parts/cockpitGreen_5.png
+  artifactKey: Guid(8e537e5de3a1d754baeb408896ded54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Parts/cockpitGreen_5.png using Guid(8e537e5de3a1d754baeb408896ded54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1ea1204972fbb46b7e4a2c45bc20b09') in 0.036830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.723203 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Tiles/cotton_green.png
+  artifactKey: Guid(0d5350e43b8eee94bab39247bde815f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Voxel Pack/PNG/Tiles/cotton_green.png using Guid(0d5350e43b8eee94bab39247bde815f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '061051dff3e7a32d78c3b3e5301e9e52') in 0.036467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.266592 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_diamond.png
+  artifactKey: Guid(94434dc819cd10a46af2cbdf23362a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_diamond.png using Guid(94434dc819cd10a46af2cbdf23362a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a50e711db8af49f758c48f8b59385d') in 0.035284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_diamond_glossy.png
+  artifactKey: Guid(066c608ebe09e7e459fdbc2b5b52fc81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_diamond_glossy.png using Guid(066c608ebe09e7e459fdbc2b5b52fc81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c31603a9b42fee73e3674add9a734a71') in 0.037786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.025509 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_rectangle.png
+  artifactKey: Guid(55c7214c936f50c429851065ce904b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_rectangle.png using Guid(55c7214c936f50c429851065ce904b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf2980f7c7195764cc4f373706b7d8ff') in 0.033901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.626836 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_square.png
+  artifactKey: Guid(3720eb6dd4ea5e1488e75bdba2b7b892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Puzzle Assets/PNG/element_green_square.png using Guid(3720eb6dd4ea5e1488e75bdba2b7b892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64e4d73e81710c24f5f816b64de2f6cb') in 0.026525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.034743 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Enemies/enemyGreen1.png
+  artifactKey: Guid(d8e069922aec0f8468b59eed728142e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Enemies/enemyGreen1.png using Guid(d8e069922aec0f8468b59eed728142e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d96b86de8ecb9910fd08cbecd9272dc') in 0.032179 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.421651 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Enemies/enemyGreen3.png
+  artifactKey: Guid(6021ff3260ffae948bad8f80de331e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Enemies/enemyGreen3.png using Guid(6021ff3260ffae948bad8f80de331e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2304c9d17ecc853f64e5bc31c9ad1ad') in 0.036458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Enemies/enemyGreen5.png
+  artifactKey: Guid(8307a5f4742719d42a87c79d764a6e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Space Shooter Pack/PNG/Enemies/enemyGreen5.png using Guid(8307a5f4742719d42a87c79d764a6e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '695d4c2489927ba200c2f4a19a7b8d18') in 0.041179 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.039837 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/White/1x/arrowDown.png
+  artifactKey: Guid(d370c1eb4c8165a4a9cb68ade5bf5954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/White/1x/arrowDown.png using Guid(d370c1eb4c8165a4a9cb68ade5bf5954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '497ee2b24d8d009b8bce07bcd2f40e3c') in 0.048237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Objects/barrel_blue_down.png
+  artifactKey: Guid(c68126b6ee933b040a1a76fb584fdaff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Racing Pack/PNG/Objects/barrel_blue_down.png using Guid(c68126b6ee933b040a1a76fb584fdaff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05034dac317c805253453a41e5f8088d') in 0.030721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barHorizontal_shadow_mid.png
+  artifactKey: Guid(e11bc65939e9bd14197d65ec1ee50b2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barHorizontal_shadow_mid.png using Guid(e11bc65939e9bd14197d65ec1ee50b2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75899f6caa69bbee88d98c4ecb6a3b13') in 0.029136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/Black/1x/arrowDown.png
+  artifactKey: Guid(db475d7b89b5cc343b24b706ff8abcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/Game Icons/PNG/Black/1x/arrowDown.png using Guid(db475d7b89b5cc343b24b706ff8abcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8a314598972a4375ffa4231bc1e9b72') in 0.026268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.282780 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/dotBlue.png
+  artifactKey: Guid(05fcb1ff9380afc4db44d90685f41468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/dotBlue.png using Guid(05fcb1ff9380afc4db44d90685f41468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abf10bf91e9a6a64ea61f4586fcc9cf3') in 0.048007 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/dotWhite.png
+  artifactKey: Guid(19031508f1e377245b664250b1c909cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/dotWhite.png using Guid(19031508f1e377245b664250b1c909cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870b75abe4d300f6f13ad1ff15305578') in 0.035365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/dotYellow.png
+  artifactKey: Guid(dfa4390317e946141932dc43c20e2fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/dotYellow.png using Guid(dfa4390317e946141932dc43c20e2fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac545719823ee773b51d72314c78d68e') in 0.045034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.206964 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barVertical_shadow_bottom.png
+  artifactKey: Guid(7a9ef87c8c29f7a48bef59b05c2158e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barVertical_shadow_bottom.png using Guid(7a9ef87c8c29f7a48bef59b05c2158e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f442cb63199e46a16f05dbbd9ad4d335') in 0.029039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barVertical_shadow_top.png
+  artifactKey: Guid(cf5acccefb7d3eb4dacf4994178c5bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Space Pack/PNG/barVertical_shadow_top.png using Guid(cf5acccefb7d3eb4dacf4994178c5bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e7123b322a0534946fcd8860e4ad38c') in 0.032539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_sliderDown.png
+  artifactKey: Guid(c5b43b326a7dbad458b2710a55c41b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/free_assets/kenney_assets/2D_assets/UI Base Pack/PNG/blue_sliderDown.png using Guid(c5b43b326a7dbad458b2710a55c41b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f7783a779c32eadfdee4dc648261333') in 0.035517 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013906 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\katja\UnityGames\Jams\GMTK_2022\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\katja\UnityGames\Jams\GMTK_2022\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 6.42 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.167 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3169ms)
+		BeginReloadAssembly (285ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (103ms)
+		EndReloadAssembly (2713ms)
+			LoadAssemblies (178ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (621ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (150ms)
+			SetupLoadedEditorAssemblies (1515ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (53ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (7ms)
+				BeforeProcessingInitializeOnLoad (262ms)
+				ProcessInitializeOnLoadAttributes (994ms)
+				ProcessInitializeOnLoadMethodAttributes (154ms)
+				AfterProcessingInitializeOnLoad (42ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (36ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.38 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4088 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (53.4 KB). Loaded Objects now: 4711.
+Memory consumption went from 163.4 MB to 163.3 MB.
+Total: 8.402100 ms (FindLiveObjects: 0.433300 ms CreateObjectMapping: 0.429400 ms MarkObjects: 7.226200 ms  DeleteObjects: 0.310800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.021168 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\katja\UnityGames\Jams\GMTK_2022\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\katja\UnityGames\Jams\GMTK_2022\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 4.45 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.033 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3035ms)
+		BeginReloadAssembly (360ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (23ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (114ms)
+		EndReloadAssembly (2304ms)
+			LoadAssemblies (228ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (806ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (129ms)
+			SetupLoadedEditorAssemblies (989ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (54ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (5ms)
+				BeforeProcessingInitializeOnLoad (180ms)
+				ProcessInitializeOnLoadAttributes (600ms)
+				ProcessInitializeOnLoadMethodAttributes (123ms)
+				AfterProcessingInitializeOnLoad (25ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.55 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4088 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (53.5 KB). Loaded Objects now: 4714.
+Memory consumption went from 163.4 MB to 163.3 MB.
+Total: 4.911900 ms (FindLiveObjects: 0.285100 ms CreateObjectMapping: 0.152300 ms MarkObjects: 4.393400 ms  DeleteObjects: 0.080100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
