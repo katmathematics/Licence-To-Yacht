@@ -21,10 +21,23 @@ public class BattleSystem : MonoBehaviour
     public BattleHUD yondHUD;
     public BattleHUD enemyHUD;
 
+    private int damage;
+    private int score;
+    //private int money;
+
+    private bool short_stun;
+    private bool long_stun_turn_1;
+    private bool long_stun_turn_2;
+
+    private string attack;
+
     // Start is called before the first frame update
     void Start()
     {
         state = BattleState.START;
+
+        long_stun_turn_1 = false; // this needs to be set up here as unlike all the others we need to check it before setting it each turn
+
         SetupBattle();
     }
 
@@ -56,7 +69,72 @@ public class BattleSystem : MonoBehaviour
     }
 
     void PlayerAttack() {
-        bool isDead = enemyUnit.TakeDamage(yondUnit.damage);
+
+        damage = 0;
+        //money = 0;
+        short_stun = false;
+        long_stun_turn_2 = false;
+
+        if (long_stun_turn_1 == true) {
+            long_stun_turn_1 = false;
+            long_stun_turn_2 = true;
+        }
+
+        /*
+            Outcomes:
+            - A base score of 1-6: Direct damage
+            - 4 of a kind: Bonus die
+            - Small straight: 1 turn stun
+            - Large straight: 2 turn stun
+            - Full House: Steal money B)
+            - Yacht: Hit by a yacht (1 turn stun + extra money)
+        */
+
+        attack = "short_straight";
+        score = 20;
+
+        if(string.Equals(attack,"1")) {
+            damage = score + 1;
+        }
+        else if (string.Equals(attack,"2")) {
+            damage = score + 2;
+        }
+        else if (string.Equals(attack,"3")) {
+            damage = score + 3;
+        }
+        else if (string.Equals(attack,"4")) {
+            damage = score + 4;
+        }
+        else if (string.Equals(attack,"5")) {
+            damage = score + 5;
+        }
+        else if (string.Equals(attack,"6")) {
+            damage = score + 6;
+        }
+        else if (string.Equals(attack,"4_of_a_kind")) {
+            damage = score;
+        }
+        else if (string.Equals(attack,"short_straight")) {
+            damage = score;
+            short_stun = true;
+        }
+        else if (string.Equals(attack,"long_straight")) {
+            damage = score;
+            long_stun_turn_1 = true;
+        }
+        else if (string.Equals(attack,"full_house")) {
+            damage = score;
+        }
+        else if (string.Equals(attack,"yacht")) {
+            damage = score;
+            short_stun = true;
+        }
+        else if (string.Equals(attack,"whiff")) {
+            damage = 0;
+        }
+        
+
+        bool isDead = enemyUnit.TakeDamage(damage);
 
         enemyHUD.SetHP(enemyUnit.currentHP);
 
@@ -65,8 +143,13 @@ public class BattleSystem : MonoBehaviour
             EndBattle();
         }
         else {
-            state = BattleState.ENEMYTURN;
-            EnemyTurn();
+            if(short_stun || long_stun_turn_1 || long_stun_turn_2) {
+                PlayerTurn();
+            }
+            else {
+                state = BattleState.ENEMYTURN;
+                EnemyTurn();
+            } 
         }
     }
 
