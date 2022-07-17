@@ -30,6 +30,7 @@ public class BattleSystem : MonoBehaviour
     //private int money;
     private int num_rolls;
     public Yacht yacht_board;
+    public GameObject Dice0;
     public Dice[] dice_sprites;
 
     private int bonus_val = 0;
@@ -42,19 +43,22 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Dice0 = GameObject.Find("Dice0");
         state = BattleState.START;
         yacht_board = new Yacht();
         //dice_set = new Dice[5];
         long_stun_turn_1 = false; // this needs to be set up here as unlike all the others we need to check it before setting it each turn
+        dice_sprites = new Dice[1]{Dice0.GetComponent<Dice>()};
 
         SetupBattle();
     }
 
-    void Update()
+    void Update() // hardcoded only one die
     {  
         for(int i = 0; i < 5; i++)
         {
-            dice_sprites[i].UpdateHelper(yacht_board.dice.dice_set[i]);
+            
+            dice_sprites[0].UpdateHelper(yacht_board.dice.dice_set[i]-1);
 
         }
     }
@@ -92,6 +96,8 @@ public class BattleSystem : MonoBehaviour
     }
     
     public void onAttackButton() {
+        yacht_board.dice.roll_all();
+        Debug.Log(yacht_board.dice.dice_set[0].ToString());
         if (state != BattleState.PLAYERTURN) {
             return;
         }
