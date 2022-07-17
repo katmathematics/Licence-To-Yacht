@@ -12,10 +12,12 @@ public class BattleSystem : MonoBehaviour
 
     public LevelLoader loader;
 
-    public BattleState state;
+    public static BattleState state;
 
     public GameObject yondPrefab;
     public GameObject enemyPrefab;
+
+    public GameObject YachtInterface; 
 
     public Transform yondStation;
     public Transform enemyStation;
@@ -43,24 +45,24 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //YachtInterface.SetActive(false);
         Dice0 = GameObject.Find("Dice0");
         state = BattleState.START;
         yacht_board = new Yacht();
         //dice_set = new Dice[5];
         long_stun_turn_1 = false; // this needs to be set up here as unlike all the others we need to check it before setting it each turn
-        dice_sprites = new Dice[1]{Dice0.GetComponent<Dice>()};
+        //dice_sprites = new Dice[1]{Dice0.GetComponent<Dice>()};
 
         SetupBattle();
     }
 
     void Update() // hardcoded only one die
     {  
-        for(int i = 0; i < 5; i++)
-        {
-            
-            dice_sprites[0].UpdateHelper(yacht_board.dice.dice_set[i]-1);
+        
+    }
 
-        }
+    public void ShowYacht() {
+        YachtInterface.SetActive(true);
     }
 
     void SetupBattle() {
@@ -143,7 +145,9 @@ public class BattleSystem : MonoBehaviour
             - Full House: Steal money B)
             - Yacht: Hit by a yacht (1 turn stun + extra money)
         */
-        
+
+        YachtInterface.SetActive(false);
+
         attack = "5";
         score = 35;
 

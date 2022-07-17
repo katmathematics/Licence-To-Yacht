@@ -10,8 +10,7 @@ public class DiceHand
         roll_all();
     }
     
-    
-    public void roll_selected_dice(bool[] dice_to_roll)
+    public int[] roll_selected_dice(bool[] dice_to_roll)
     {
         int index = 0;
         foreach(bool i in dice_to_roll)
@@ -23,10 +22,11 @@ public class DiceHand
             index++;
             
         }
+        return dice_set;
     }
+
     public void roll_all()
     {
-         
         roll_selected_dice(new bool[5]{true,true,true,true,true});
     }
     public void add_die()
@@ -275,7 +275,7 @@ public class Yacht
             counts[i]++;
         }
         bool hasyacht = false;
-        int index = 0;
+        //int index = 0;
         foreach(int i in counts)
         {
             
