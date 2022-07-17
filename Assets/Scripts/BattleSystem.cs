@@ -24,7 +24,11 @@ public class BattleSystem : MonoBehaviour
     private int damage;
     private int score;
     //private int money;
+    private int num_rolls;
+    public Yacht yacht_board;
+    public Dice[] dice_sprites;
 
+    private int bonus_val = 0;
     private bool short_stun;
     private bool long_stun_turn_1;
     private bool long_stun_turn_2;
@@ -35,10 +39,20 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
-
+        yacht_board = new Yacht();
+        //dice_set = new Dice[5];
         long_stun_turn_1 = false; // this needs to be set up here as unlike all the others we need to check it before setting it each turn
 
         SetupBattle();
+    }
+
+    void Update()
+    {  
+        for(int i = 0; i < 5; i++)
+        {
+            dice_sprites[i].UpdateHelper(yacht_board.dice.dice_set[i]);
+
+        }
     }
 
     void SetupBattle() {
@@ -51,6 +65,8 @@ public class BattleSystem : MonoBehaviour
         yondHUD.SetHUD(yondUnit);
         enemyHUD.SetHUD(enemyUnit);
 
+        num_rolls = 2;
+
         state = BattleState.PLAYERTURN;
         PlayerTurn();
     }
@@ -59,15 +75,36 @@ public class BattleSystem : MonoBehaviour
         
     }
 
+    public void onRollClick()
+    {
+        if(state!= BattleState.PLAYERTURN || num_rolls<=0){
+            return;
+        }
+        else
+        {
+            yacht_board.dice.roll_selected_dice(yacht_board.dice.active);
+        }
+    }
     public void onAttackButton() {
         if (state != BattleState.PLAYERTURN) {
             return;
         }
         else {
-            PlayerAttack();
+            if(! yacht_board.available_choices["5"])
+            {
+                attack = "5";
+                PlayerAttack();
+            }
         }
     }
-
+    public void onDiceClick(int die_num)
+    {
+        if(state!= BattleState.PLAYERTURN || num_rolls<=0){
+            return;
+        }
+        dice_sprites[die_num].active = ! dice_sprites[die_num].active;
+        yacht_board.dice.active[die_num]  = ! yacht_board.dice.active[die_num];
+    }
     void PlayerAttack() {
 
         damage = 0;
@@ -89,50 +126,64 @@ public class BattleSystem : MonoBehaviour
             - Full House: Steal money B)
             - Yacht: Hit by a yacht (1 turn stun + extra money)
         */
-
+        
         attack = "5";
         score = 35;
 
         if(string.Equals(attack,"1")) {
+            score = yacht_board.score_one();
             damage = score + 1;
         }
         else if (string.Equals(attack,"2")) {
+            score = yacht_board.score_two();
             damage = score + 2;
         }
         else if (string.Equals(attack,"3")) {
+            score = yacht_board.score_three();
             damage = score + 3;
         }
         else if (string.Equals(attack,"4")) {
+            score = yacht_board.score_four();
             damage = score + 4;
         }
         else if (string.Equals(attack,"5")) {
             damage = score + 5;
+            score = yacht_board.score_five();
         }
         else if (string.Equals(attack,"6")) {
             damage = score + 6;
+            score = yacht_board.score_six();
         }
         else if (string.Equals(attack,"4_of_a_kind")) {
+            int bonus;
+            score = yacht_board.score_4kind(out bonus);
+            bonus_val = bonus;
             damage = score;
         }
         else if (string.Equals(attack,"short_straight")) {
+            score = yacht_board.score_smstr8();
             damage = score;
             short_stun = true;
         }
         else if (string.Equals(attack,"long_straight")) {
+            score = yacht_board.score_lgstr8();
             damage = score;
             long_stun_turn_1 = true;
         }
         else if (string.Equals(attack,"full_house")) {
+            score = yacht_board.score_fhouse();
             damage = score;
         }
         else if (string.Equals(attack,"yacht")) {
+            score = yacht_board.score_yacht();
             damage = score;
             short_stun = true;
         }
-        else if (string.Equals(attack,"whiff")) {
-            damage = 0;
+        if(bonus_val!= 0)
+        {
+            damage = damage + bonus_val;
+            bonus_val = 0;
         }
-        
 
         bool isDead = enemyUnit.TakeDamage(damage);
 
