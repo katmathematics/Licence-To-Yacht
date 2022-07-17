@@ -1718,6 +1718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0870611b4774c941bbc5a4854802226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loader: {fileID: 1496342997}
   state: 0
   yondPrefab: {fileID: 7381944719844920475, guid: 37539dd9477037048b76d7301a503f2f, type: 3}
   enemyPrefab: {fileID: 7381944719844920475, guid: 520e0e0d8e3d75c4bb6bdbafdac8b0e6, type: 3}
@@ -2794,6 +2795,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1496342997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8870143306367783405, guid: 0932558e49d84f94c8ee363d62eaaf77, type: 3}
+  m_PrefabInstance: {fileID: 8870143306789995771}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48431b8b4011d674fb50256dd03cb28c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621518478
 GameObject:
   m_ObjectHideFlags: 0

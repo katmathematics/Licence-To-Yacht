@@ -10,6 +10,8 @@ public class BattleSystem : MonoBehaviour
     Unit yondUnit;
     Unit enemyUnit;
 
+    public LevelLoader loader;
+
     public BattleState state;
 
     public GameObject yondPrefab;
@@ -20,6 +22,8 @@ public class BattleSystem : MonoBehaviour
 
     public BattleHUD yondHUD;
     public BattleHUD enemyHUD;
+
+    public static bool gameWon = true;
 
     private int damage;
     private int score;
@@ -191,6 +195,7 @@ public class BattleSystem : MonoBehaviour
 
         if(isDead) {
             state = BattleState.WON;
+            gameWon = true;
             EndBattle();
         }
         else {
@@ -218,6 +223,7 @@ public class BattleSystem : MonoBehaviour
 
         if(isDead) {
             state = BattleState.LOST;
+            gameWon = false;
             EndBattle();
         }
         else {
@@ -227,11 +233,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     void EndBattle() {
-        if(state == BattleState.LOST) {
-
-        }
-        else {
-
-        }
+        //loader.GetComponent<LevelLoader>().LoadNextLevel();
+        loader.LoadNextLevel();
     }
 }
