@@ -38,6 +38,8 @@ public class BattleSystem : MonoBehaviour
 
     public static bool gameWon = true;
 
+    public static bool noActions = false;
+
     public static int currentSelection;
 
     private int damage;
@@ -220,8 +222,16 @@ public class BattleSystem : MonoBehaviour
             gameWon = true;
             EndBattle();
         }
+
+        if (noActions) {
+            state = BattleState.LOST;
+            gameWon = false;
+            EndBattle();
+        }
+
         else {
             if(short_stun || long_stun_turn_1 || long_stun_turn_2) {
+                attackButton.interactable = true;
                 PlayerTurn();
             }
             else {
@@ -236,8 +246,9 @@ public class BattleSystem : MonoBehaviour
         damage = 0;
 
         for (int i = 0; i < 6; i++) {
-            damage += Random.Range(2,7);
+            damage += Random.Range(3,7);
         }
+        
 
         bool isDead = yondUnit.TakeDamage(damage);
 

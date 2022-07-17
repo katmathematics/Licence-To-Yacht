@@ -32,7 +32,7 @@ public class YachtSteering : MonoBehaviour
 
     public static int rolls_left;
 
-    public int[] dice_values = {1, 1, 1, 1, 1};
+    public static int[] dice_values = {1, 1, 1, 1, 1};
     private int diceValue;
     private int i;
     private int index;
@@ -113,17 +113,28 @@ public class YachtSteering : MonoBehaviour
     }
 
     public void onAdvance() {
+
+        BattleSystem.noActions = true;
+        foreach(Button i in selectors)
+        {
+            if (i.interactable) {
+                BattleSystem.noActions = false;
+            }
+        }
+
+        SystemControls.PlayerAttack();
         YachtInterface.transform.localPosition = new Vector3(0, 840, 0);
         activeDice[0] = true;
         activeDice[1] = true;
         activeDice[2] = true;
         activeDice[3] = true;
         activeDice[4] = true;
-        UpdateDice();
+
         rolls_left = 2;
         UpdateRollsLeft();
         BattleSystem.state = BattleState.PLAYERTURN;
-        SystemControls.PlayerAttack();
+        roll_selected(activeDice);
+        UpdateDice();
     }
 
     public void selectScore()

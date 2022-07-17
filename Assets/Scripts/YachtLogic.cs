@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class YachtLogic : MonoBehaviour
 {
-    public YachtSteering dice;
+    //public YachtSteering dice;
     public Dictionary<string, bool> available_choices= new Dictionary<string, bool>(){
             {"1", false},
             {"2",false},
@@ -19,10 +19,12 @@ public class YachtLogic : MonoBehaviour
             {"yacht",false},
         };
 
+    private int i;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,9 +34,10 @@ public class YachtLogic : MonoBehaviour
     }
 
     public int score_one(){
-        if(!available_choices["1"]) return 0;
+        //if(!available_choices["1"]) return 0;
+        Debug.Log(YachtSteering.dice_values[3]);
         int score = 0;
-        foreach(var die in dice.dice_values)
+        foreach(var die in YachtSteering.dice_values)
         {
             if(die == 1)
             {
@@ -45,9 +48,10 @@ public class YachtLogic : MonoBehaviour
         return score;
     }
     public int score_two(){
-        if(!available_choices["2"]) return 0;
+        Debug.Log(YachtSteering.dice_values[3]);
+        //if(!available_choices["2"]) return 0;
         int score = 0;
-        foreach(var die in dice.dice_values)
+        foreach(var die in YachtSteering.dice_values)
         {
             if(die == 2)
             {
@@ -58,9 +62,9 @@ public class YachtLogic : MonoBehaviour
         return score;
     }
     public int score_three(){
-        if(!available_choices["3"]) return 0;
+        //if(!available_choices["3"]) return 0;
         int score = 0;
-        foreach(var die in dice.dice_values)
+        foreach(var die in YachtSteering.dice_values)
         {
             if(die == 3)
             {
@@ -71,49 +75,53 @@ public class YachtLogic : MonoBehaviour
         return score;
     }
     public int score_four(){
-        if(!available_choices["4"]) return 0;
+        //if(!available_choices["4"]) return 0;
         int score = 0;
-        foreach(var die in dice.dice_values)
+        foreach(var die in YachtSteering.dice_values)
         {
             if(die == 4)
             {
                 score = score + 4;
             }
         }
+        Debug.Log(score.ToString());
         available_choices["4"] = false;
         return score;
     }
     public int score_five(){
-        if(!available_choices["5"]) return 0;
+        //if(!available_choices["5"]) return 0;
         int score = 0;
-        foreach(var die in dice.dice_values)
+        foreach(var die in YachtSteering.dice_values)
         {
             if(die == 5)
             {
                 score = score + 5;
             }
         }
+        
+        Debug.Log(score.ToString());
         available_choices["5"] = false;
         return score;
     }
     public int score_six(){
-        if(!available_choices["6"]) return 0;
+        //if(!available_choices["6"]) return 0;
         int score = 0;
-        foreach(var die in dice.dice_values)
+        foreach(var die in YachtSteering.dice_values)
         {
             if(die == 6)
             {
                 score = score + 6;
             }
         }
+        Debug.Log(score.ToString());
         available_choices["6"] = false;
         return score;
     }
     public int score_fhouse(){
-        if(!available_choices["fhouse"]) return 0;
+        //if(!available_choices["fhouse"]) return 0;
         available_choices["fhouse"] = false;
-        int[] counts = new int[6];
-        foreach(int i in dice.dice_values)
+        int[] counts = new int[7];
+        foreach(int i in YachtSteering.dice_values)
         {
             counts[i]++;
         }
@@ -126,35 +134,59 @@ public class YachtLogic : MonoBehaviour
         }
         if(hasthree && hastwo) 
         {
-            
             return 25;
         }
         else return 0;
     }
 
     public int score_4kind(out int bonus){
+        /*
         if(!available_choices["4kind"])
         {
             bonus = 0;
             return 0;
         }
         available_choices["4kind"] = false;
-        int[] counts = new int[6];
-        foreach(int i in dice.dice_values)
+        */
+        int[] counts = new int[7];
+        
+        for(int i = 0; i < 5; i++) 
+        {
+            counts[YachtSteering.dice_values[i]]++;
+        }
+
+        /*
+        foreach(int i in YachtSteering.dice_values)
         {
             counts[i]++;
         }
+        */
+        Debug.Log("Counts: ");
+        Debug.Log(counts[0]);
+        Debug.Log(counts[1]);
+        Debug.Log(counts[2]);
+        Debug.Log(counts[3]);
+        Debug.Log(counts[4]);
+        Debug.Log(counts[5]);
+        Debug.Log(counts[6]);
+        Debug.Log("Values: ");
+        Debug.Log(YachtSteering.dice_values[0]);
+        Debug.Log(YachtSteering.dice_values[1]);
+        Debug.Log(YachtSteering.dice_values[2]);
+        Debug.Log(YachtSteering.dice_values[3]);
+        Debug.Log(YachtSteering.dice_values[4]);
+        
         bool hasfour = false;
         int index = 0;
         foreach(int i in counts)
-        {
-            
+        {    
             if(i == 4){
                 hasfour = true;
                 break;
-            } 
-
-
+            }
+            else {
+                index++;
+            }
         }
         if(hasfour) 
         {
@@ -169,10 +201,10 @@ public class YachtLogic : MonoBehaviour
         }
     }
     public int score_smstr8(){
-        if(!available_choices["smstr8"]) return 0;
+        //if(!available_choices["smstr8"]) return 0;
         available_choices["smstr8"] = false;
-        int[] counts = new int[6];
-        foreach(int i in dice.dice_values)
+        int[] counts = new int[7];
+        foreach(int i in YachtSteering.dice_values)
         {
             counts[i]++;
         }
@@ -190,10 +222,10 @@ public class YachtLogic : MonoBehaviour
         else return 0;
     }
     public int score_lgstr8(){
-        if(!available_choices["lgstr8"]) return 0;
+        //if(!available_choices["lgstr8"]) return 0;
         available_choices["lgstr8"] = false;
-        int[] counts = new int[6];
-        foreach(int i in dice.dice_values)
+        int[] counts = new int[7];
+        foreach(int i in YachtSteering.dice_values)
         {
             counts[i]++;
         }
@@ -212,10 +244,10 @@ public class YachtLogic : MonoBehaviour
     }
 
     public int score_yacht(){
-        if(!available_choices["yacht"]) return 0;
+        //if(!available_choices["yacht"]) return 0;
         available_choices["yacht"] = false;
-        int[] counts = new int[6];
-        foreach(int i in dice.dice_values)
+        int[] counts = new int[7];
+        foreach(int i in YachtSteering.dice_values)
         {
             counts[i]++;
         }
