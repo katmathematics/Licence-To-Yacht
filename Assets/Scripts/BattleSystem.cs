@@ -231,7 +231,7 @@ public class BattleSystem : MonoBehaviour
         damage = 0;
 
         for (int i = 0; i < 6; i++) {
-            damage += Random.Range(1,7);
+            damage += Random.Range(2,7);
         }
 
         bool isDead = yondUnit.TakeDamage(damage);
