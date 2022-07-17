@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class YachtSteering : MonoBehaviour
 {
@@ -12,13 +13,17 @@ public class YachtSteering : MonoBehaviour
     public Sprite[] faces;
     public Color[] colors;
 
+    public TMP_Text rollsLeftDisplayText; 
+
+    public Button rollButton;
+
     public static bool[] activeDice = {true,true,true,true,true};
 
     public Yacht yacht_logic;
 
     public int rolls_left;
 
-    private int[] dice_values = {1, 1, 1, 1, 1};
+    public int[] dice_values = {1, 1, 1, 1, 1};
     private int diceValue;
     private int i;
     private int index;
@@ -38,15 +43,27 @@ public class YachtSteering : MonoBehaviour
         
     }
 
+    public void initalizeYachtPhase() {
+        roll_selected(activeDice);
+        UpdateDice();
+        UpdateRollsLeft();
+        rolls_left = 2;
+    }
+
+
     public void onRollClick()
     {
-        rolls_left = 5;
         //dice[4].SetActive(false);
         if(BattleSystem.state == BattleState.PLAYERTURN && rolls_left > 0){
             rolls_left -= 1;
+            UpdateRollsLeft();
             //yacht_logic.dice.roll_selected_dice(yacht_logic.dice);
             roll_selected(activeDice);//yacht_logic.dice.roll_all();
             UpdateDice();
+
+            if(rolls_left <= 0) {
+                rollButton.interactable = false;
+            }
         }
         else
         {
@@ -54,7 +71,7 @@ public class YachtSteering : MonoBehaviour
         }
     }
 
-    private void roll_selected(bool[] dice_to_roll)
+    public void roll_selected(bool[] dice_to_roll)
     {
         int index = 0;
         foreach(bool i in dice_to_roll)
@@ -91,7 +108,7 @@ public class YachtSteering : MonoBehaviour
         }
     }
 
-    void UpdateDice() {
+    public void UpdateDice() {
         i = 0;
 
         while (i < 5) {
@@ -109,5 +126,9 @@ public class YachtSteering : MonoBehaviour
 
             i += 1;
         }
+    }
+
+    public void UpdateRollsLeft() {
+        rollsLeftDisplayText.text = "Rolls Left: " + rolls_left;
     }
 }

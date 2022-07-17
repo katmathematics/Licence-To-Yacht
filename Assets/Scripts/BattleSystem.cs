@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
+public enum BattleState { START, PLAYERTURN, YACHTPHASE, ENEMYTURN, WON, LOST}
 
 public class BattleSystem : MonoBehaviour
 {
@@ -17,6 +17,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject yondPrefab;
     public GameObject enemyPrefab;
 
+    public Button rollButton;
+
     public GameObject YachtInterface; 
 
     public Transform yondStation;
@@ -25,15 +27,15 @@ public class BattleSystem : MonoBehaviour
     public BattleHUD yondHUD;
     public BattleHUD enemyHUD;
 
+    public YachtSteering Steering;
+
     public static bool gameWon = true;
 
     private int damage;
     private int score;
     //private int money;
     private int num_rolls;
-    public Yacht yacht_board;
-    public GameObject Dice0;
-    public Dice[] dice_sprites;
+    public YachtLogic Logic;
 
     private int bonus_val = 0;
     private bool short_stun;
@@ -45,13 +47,9 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //YachtInterface.SetActive(false);
-        Dice0 = GameObject.Find("Dice0");
         state = BattleState.START;
-        yacht_board = new Yacht();
-        //dice_set = new Dice[5];
+
         long_stun_turn_1 = false; // this needs to be set up here as unlike all the others we need to check it before setting it each turn
-        //dice_sprites = new Dice[1]{Dice0.GetComponent<Dice>()};
 
         SetupBattle();
     }
@@ -61,8 +59,12 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-    public void ShowYacht() {
+    private void ShowYacht() {
         YachtInterface.SetActive(true);
+    }
+
+    private void HideYacht() {
+        YachtInterface.SetActive(false);
     }
 
     void SetupBattle() {
@@ -82,50 +84,32 @@ public class BattleSystem : MonoBehaviour
     }
 
     void PlayerTurn() {
-        
+
     }
 
-    public void onRollClick()
-    {
-        // If its not a valid time to roll the dice, exit the function- else run the function for rolling the dice
-        if(state!= BattleState.PLAYERTURN || num_rolls<=0){
-            return;
-        }
-        else
-        {
-            yacht_board.dice.roll_selected_dice(yacht_board.dice.active);
-        }
-    }
-    
+
     public void onAttackButton() {
-        yacht_board.dice.roll_all();
-        Debug.Log(yacht_board.dice.dice_set[0].ToString());
+
+        //yacht_board.dice.roll_all();
+
+        //Debug.Log(yacht_board.dice.dice_set[0].ToString());
         if (state != BattleState.PLAYERTURN) {
             return;
         }
         else {
-            if(! yacht_board.available_choices["5"])
-            {
-                attack = "5";
-                PlayerAttack();
-            }
+            state = BattleState.YACHTPHASE;
+            rollButton.interactable = true;
+            ShowYacht();
+
+            //PlayerAttack();
+            
         }
     }
-    public void onDiceClick(int die_num)
-    {
-        //Exit the function if its not the player's turn or they have no rolls left
-        if(state != BattleState.PLAYERTURN || num_rolls<=0){
-            return;
-        }
-        
-        //If the dice is clicked... invert the active state of the die?
-        dice_sprites[die_num].active = ! dice_sprites[die_num].active;
 
-        //Invert the game's tracker for if the die is active
-        yacht_board.dice.active[die_num]  = ! yacht_board.dice.active[die_num];
-    }
-    void PlayerAttack() {
+    public void PlayerAttack() {
 
+        attack = "6";
+        score = 0;
         damage = 0;
         //money = 0;
         short_stun = false;
@@ -146,61 +130,58 @@ public class BattleSystem : MonoBehaviour
             - Yacht: Hit by a yacht (1 turn stun + extra money)
         */
 
-        YachtInterface.SetActive(false);
-
-        attack = "5";
-        score = 35;
+        HideYacht();
 
         if(string.Equals(attack,"1")) {
-            score = yacht_board.score_one();
+            score = Logic.score_one();
             damage = score + 1;
         }
         else if (string.Equals(attack,"2")) {
-            score = yacht_board.score_two();
+            score = Logic.score_two();
             damage = score + 2;
         }
         else if (string.Equals(attack,"3")) {
-            score = yacht_board.score_three();
+            score = Logic.score_three();
             damage = score + 3;
         }
         else if (string.Equals(attack,"4")) {
-            score = yacht_board.score_four();
+            score = Logic.score_four();
             damage = score + 4;
         }
         else if (string.Equals(attack,"5")) {
+            score = Logic.score_five();
             damage = score + 5;
-            score = yacht_board.score_five();
         }
         else if (string.Equals(attack,"6")) {
+            score = Logic.score_six();
             damage = score + 6;
-            score = yacht_board.score_six();
         }
         else if (string.Equals(attack,"4_of_a_kind")) {
             int bonus;
-            score = yacht_board.score_4kind(out bonus);
+            score = Logic.score_4kind(out bonus);
             bonus_val = bonus;
             damage = score;
         }
         else if (string.Equals(attack,"short_straight")) {
-            score = yacht_board.score_smstr8();
+            score = Logic.score_smstr8();
             damage = score;
             short_stun = true;
         }
         else if (string.Equals(attack,"long_straight")) {
-            score = yacht_board.score_lgstr8();
+            score = Logic.score_lgstr8();
             damage = score;
             long_stun_turn_1 = true;
         }
         else if (string.Equals(attack,"full_house")) {
-            score = yacht_board.score_fhouse();
+            score = Logic.score_fhouse();
             damage = score;
         }
         else if (string.Equals(attack,"yacht")) {
-            score = yacht_board.score_yacht();
+            score = Logic.score_yacht();
             damage = score;
             short_stun = true;
         }
-        if(bonus_val!= 0)
+        if(bonus_val != 0)
         {
             damage = damage + bonus_val;
             bonus_val = 0;
