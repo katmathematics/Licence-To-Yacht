@@ -81,6 +81,7 @@ public class BattleSystem : MonoBehaviour
 
     public void onRollClick()
     {
+        // If its not a valid time to roll the dice, exit the function- else run the function for rolling the dice
         if(state!= BattleState.PLAYERTURN || num_rolls<=0){
             return;
         }
@@ -89,6 +90,7 @@ public class BattleSystem : MonoBehaviour
             yacht_board.dice.roll_selected_dice(yacht_board.dice.active);
         }
     }
+    
     public void onAttackButton() {
         if (state != BattleState.PLAYERTURN) {
             return;
@@ -103,10 +105,15 @@ public class BattleSystem : MonoBehaviour
     }
     public void onDiceClick(int die_num)
     {
-        if(state!= BattleState.PLAYERTURN || num_rolls<=0){
+        //Exit the function if its not the player's turn or they have no rolls left
+        if(state != BattleState.PLAYERTURN || num_rolls<=0){
             return;
         }
+        
+        //If the dice is clicked... invert the active state of the die?
         dice_sprites[die_num].active = ! dice_sprites[die_num].active;
+
+        //Invert the game's tracker for if the die is active
         yacht_board.dice.active[die_num]  = ! yacht_board.dice.active[die_num];
     }
     void PlayerAttack() {
