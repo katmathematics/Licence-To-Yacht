@@ -10,6 +10,7 @@ public class YachtSteering : MonoBehaviour
 
     public Image[] dice_display;
     public Sprite[] faces;
+    public Color[] colors;
 
     public static bool[] activeDice = {true,true,true,true,true};
 
@@ -27,7 +28,8 @@ public class YachtSteering : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        roll_selected(activeDice);
+        UpdateDice();
     }
 
     // Update is called once per frame
@@ -66,14 +68,15 @@ public class YachtSteering : MonoBehaviour
         }
     }
 
-    public void onDiceClick()
+    public void onDiceClick(int diceIndex)
     {
-        if (activeDice[1]) {
-             activeDice[1] = false;
+        if (activeDice[diceIndex]) {
+             activeDice[diceIndex] = false;
         }
         else {
-             activeDice[1] = true;
+             activeDice[diceIndex] = true;
         }
+        UpdateDice();
     }
 
     public void selectScore()
@@ -95,6 +98,14 @@ public class YachtSteering : MonoBehaviour
             
             //diceValue = //yacht_logic.dice.dice_set[i];
             dice_display[i].sprite = faces[dice_values[i]-1];
+            //dice_display[i].sprite
+            if(activeDice[i]) {
+                dice_display[i].color = colors[0];
+            }
+            else {
+                dice_display[i].color = colors[1];
+            }
+            
 
             i += 1;
         }
