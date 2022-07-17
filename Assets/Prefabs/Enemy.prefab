@@ -99,6 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Enemy
   damage: 5
-  maxHP: 230
-  currentHP: 230
+  maxHP: 170
+  currentHP: 170
   money: 0
