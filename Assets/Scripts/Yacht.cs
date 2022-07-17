@@ -4,7 +4,7 @@ using UnityEngine;
 public class DiceHand
 {
     public bool[] active{get;set;} = new bool[5]{false,false,false,false,false};
-    public int[] dice_set{get;set;} = new int[5];
+    public int[] dice_set{get;set;} = new int[5]{1,1,1,1,1};
     public DiceHand()
     {
         roll_all();
