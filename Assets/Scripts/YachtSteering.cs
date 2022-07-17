@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class YachtSteering : MonoBehaviour
 {
     //public GameObject[] dice;
@@ -16,12 +17,20 @@ public class YachtSteering : MonoBehaviour
     public TMP_Text rollsLeftDisplayText; 
 
     public Button rollButton;
+    public Button attackButton;
+    public Button advanceButton;
+
+    public Button[] selectors;
+
+    public BattleSystem SystemControls;
+
+    public GameObject YachtInterface; 
 
     public static bool[] activeDice = {true,true,true,true,true};
 
     public Yacht yacht_logic;
 
-    public int rolls_left;
+    public static int rolls_left;
 
     public int[] dice_values = {1, 1, 1, 1, 1};
     private int diceValue;
@@ -46,19 +55,18 @@ public class YachtSteering : MonoBehaviour
     public void initalizeYachtPhase() {
         roll_selected(activeDice);
         UpdateDice();
-        UpdateRollsLeft();
         rolls_left = 2;
+        UpdateRollsLeft();
     }
 
 
     public void onRollClick()
     {
         //dice[4].SetActive(false);
-        if(BattleSystem.state == BattleState.PLAYERTURN && rolls_left > 0){
+        if(BattleSystem.state == BattleState.YACHTPHASE && rolls_left > 0){
             rolls_left -= 1;
             UpdateRollsLeft();
-            //yacht_logic.dice.roll_selected_dice(yacht_logic.dice);
-            roll_selected(activeDice);//yacht_logic.dice.roll_all();
+            roll_selected(activeDice);
             UpdateDice();
 
             if(rolls_left <= 0) {
@@ -94,6 +102,28 @@ public class YachtSteering : MonoBehaviour
              activeDice[diceIndex] = true;
         }
         UpdateDice();
+    }
+
+    public void onScoreSelection(int selectorIndex) {
+        rolls_left = 0;
+        UpdateRollsLeft();
+        selectors[selectorIndex].interactable = false;
+        advanceButton.interactable = true;
+        BattleSystem.currentSelection = selectorIndex;
+    }
+
+    public void onAdvance() {
+        YachtInterface.transform.localPosition = new Vector3(0, 840, 0);
+        activeDice[0] = true;
+        activeDice[1] = true;
+        activeDice[2] = true;
+        activeDice[3] = true;
+        activeDice[4] = true;
+        UpdateDice();
+        rolls_left = 2;
+        UpdateRollsLeft();
+        BattleSystem.state = BattleState.PLAYERTURN;
+        SystemControls.PlayerAttack();
     }
 
     public void selectScore()

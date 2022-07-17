@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public enum BattleState { START, PLAYERTURN, YACHTPHASE, ENEMYTURN, WON, LOST}
 
@@ -18,6 +19,12 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemyPrefab;
 
     public Button rollButton;
+    public Button attackButton;
+    public Button advanceButton;
+
+    public Button[] selectors;
+
+    public AudioClip gunfire;
 
     public GameObject YachtInterface; 
 
@@ -31,23 +38,31 @@ public class BattleSystem : MonoBehaviour
 
     public static bool gameWon = true;
 
+    public static int currentSelection;
+
     private int damage;
     private int score;
     //private int money;
-    private int num_rolls;
     public YachtLogic Logic;
 
     private int bonus_val = 0;
     private bool short_stun;
     private bool long_stun_turn_1;
     private bool long_stun_turn_2;
+    
 
     private string attack;
+    private string[] attacks = {"1","2","3","4","5","6","4_of_a_kind","short_straight","long_straight","full_house","yacht"};
+
+
+    private int counter = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        HideYacht();
         state = BattleState.START;
+        //YachtInterface.SetActive(false);
 
         long_stun_turn_1 = false; // this needs to be set up here as unlike all the others we need to check it before setting it each turn
 
@@ -59,12 +74,13 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-    private void ShowYacht() {
-        YachtInterface.SetActive(true);
+    public void ShowYacht() {
+        YachtInterface.transform.localPosition = new Vector3(0, 0, 0);
+        advanceButton.interactable = false;
     }
 
-    private void HideYacht() {
-        YachtInterface.SetActive(false);
+    public void HideYacht() {
+        YachtInterface.transform.localPosition = new Vector3(0, 840, 0);
     }
 
     void SetupBattle() {
@@ -77,9 +93,15 @@ public class BattleSystem : MonoBehaviour
         yondHUD.SetHUD(yondUnit);
         enemyHUD.SetHUD(enemyUnit);
 
-        num_rolls = 2;
+        YachtSteering.rolls_left = 2;
 
         state = BattleState.PLAYERTURN;
+
+        while(counter < 3) {
+            selectors[counter].interactable = true;
+            counter += 1;
+        }
+
         PlayerTurn();
     }
 
@@ -97,8 +119,10 @@ public class BattleSystem : MonoBehaviour
             return;
         }
         else {
+            YachtSteering.rolls_left = 2;
             state = BattleState.YACHTPHASE;
             rollButton.interactable = true;
+            attackButton.interactable = false;
             ShowYacht();
 
             //PlayerAttack();
@@ -108,7 +132,7 @@ public class BattleSystem : MonoBehaviour
 
     public void PlayerAttack() {
 
-        attack = "6";
+        attack = attacks[currentSelection];
         score = 0;
         damage = 0;
         //money = 0;
@@ -226,6 +250,7 @@ public class BattleSystem : MonoBehaviour
         }
         else {
             state = BattleState.PLAYERTURN;
+            attackButton.interactable = true;
             PlayerTurn();
         }
     }
