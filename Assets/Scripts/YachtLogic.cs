@@ -35,7 +35,6 @@ public class YachtLogic : MonoBehaviour
 
     public int score_one(){
         //if(!available_choices["1"]) return 0;
-        Debug.Log(YachtSteering.dice_values[3]);
         int score = 0;
         foreach(var die in YachtSteering.dice_values)
         {
@@ -48,8 +47,6 @@ public class YachtLogic : MonoBehaviour
         return score;
     }
     public int score_two(){
-        Debug.Log(YachtSteering.dice_values[3]);
-        //if(!available_choices["2"]) return 0;
         int score = 0;
         foreach(var die in YachtSteering.dice_values)
         {
@@ -84,7 +81,6 @@ public class YachtLogic : MonoBehaviour
                 score = score + 4;
             }
         }
-        Debug.Log(score.ToString());
         available_choices["4"] = false;
         return score;
     }
@@ -98,8 +94,6 @@ public class YachtLogic : MonoBehaviour
                 score = score + 5;
             }
         }
-        
-        Debug.Log(score.ToString());
         available_choices["5"] = false;
         return score;
     }
@@ -113,7 +107,6 @@ public class YachtLogic : MonoBehaviour
                 score = score + 6;
             }
         }
-        Debug.Log(score.ToString());
         available_choices["6"] = false;
         return score;
     }
@@ -154,27 +147,6 @@ public class YachtLogic : MonoBehaviour
         {
             counts[YachtSteering.dice_values[i]]++;
         }
-
-        /*
-        foreach(int i in YachtSteering.dice_values)
-        {
-            counts[i]++;
-        }
-        */
-        Debug.Log("Counts: ");
-        Debug.Log(counts[0]);
-        Debug.Log(counts[1]);
-        Debug.Log(counts[2]);
-        Debug.Log(counts[3]);
-        Debug.Log(counts[4]);
-        Debug.Log(counts[5]);
-        Debug.Log(counts[6]);
-        Debug.Log("Values: ");
-        Debug.Log(YachtSteering.dice_values[0]);
-        Debug.Log(YachtSteering.dice_values[1]);
-        Debug.Log(YachtSteering.dice_values[2]);
-        Debug.Log(YachtSteering.dice_values[3]);
-        Debug.Log(YachtSteering.dice_values[4]);
         
         bool hasfour = false;
         int index = 0;

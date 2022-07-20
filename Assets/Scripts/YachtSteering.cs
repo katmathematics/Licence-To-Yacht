@@ -46,13 +46,10 @@ public class YachtSteering : MonoBehaviour
         UpdateDice();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void initalizeYachtPhase() {
+        foreach (var selectorButton in selectors) {
+            selectorButton.enabled = true;
+        }
         roll_selected(activeDice);
         UpdateDice();
         rolls_left = 2;
@@ -62,7 +59,9 @@ public class YachtSteering : MonoBehaviour
 
     public void onRollClick()
     {
-        //dice[4].SetActive(false);
+        foreach (var selectorButton in selectors) {
+            selectorButton.enabled = true;
+        }
         if(BattleSystem.state == BattleState.YACHTPHASE && rolls_left > 0){
             rolls_left -= 1;
             UpdateRollsLeft();
@@ -107,6 +106,16 @@ public class YachtSteering : MonoBehaviour
     public void onScoreSelection(int selectorIndex) {
         rolls_left = 0;
         UpdateRollsLeft();
+        foreach (var selectorButton in selectors) {
+            if (selectorButton.interactable && selectorButton != selectors[selectorIndex]) {
+                selectorButton.enabled = false;
+            }
+            else if (selectorButton == selectors[selectorIndex]) {
+                selectorButton.interactable = false;
+            }
+        }
+        rollButton.interactable = false;
+
         selectors[selectorIndex].interactable = false;
         advanceButton.interactable = true;
         BattleSystem.currentSelection = selectorIndex;
@@ -120,8 +129,10 @@ public class YachtSteering : MonoBehaviour
             if (i.interactable) {
                 BattleSystem.noActions = false;
             }
+            i.enabled = true;
         }
 
+        rollButton.interactable = true;
         SystemControls.PlayerAttack();
         YachtInterface.transform.localPosition = new Vector3(0, 840, 0);
         activeDice[0] = true;
