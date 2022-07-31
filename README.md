@@ -12,8 +12,8 @@ Play as James Yacht, a secret agent cowboy from over yonder as he tries to take 
 - Art: Aseprite
 
 ## Credits:
-- Designed and Programmed by: [Alex Arnold](https://twitter.com/AlexArn1620) and [Katja Mathesius](https://twitter.com/Kat_Mathematics)
-- Background and Sprite Art by: [Katja Mathesius](https://twitter.com/Kat_Mathematics)
+- Designed and Programmed by: [Katja Mathesius](https://twitter.com/Kat_Mathematics) and [Alex Arnold](https://twitter.com/AlexArn1620)
+- Art by: [Katja Mathesius](https://twitter.com/Kat_Mathematics)
 - Non-Original Asset Credits: 
    - [Kenney (Sound Effects)](https://www.kenney.nl/assets?q=ui)
    - [Filmhimmel ("007 Golden Eye" Font)](https://www.dafont.com/filmhimmel.d736)
