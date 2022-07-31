@@ -132,6 +132,20 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    //Manually Concedes the Battle (Used in the Pause Menu)
+    public void concedeBattle() {
+        state = BattleState.LOST;
+        gameWon = false;
+        EndBattle();
+    }
+
+    //Manually Wins the Battle (No Purpose= just a compliment to concede)
+    public void winBattle() {
+        state = BattleState.WON;
+        gameWon = true;
+        EndBattle();
+    }
+
     public void PlayerAttack() {
 
         attack = attacks[currentSelection];
